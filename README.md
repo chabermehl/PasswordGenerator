@@ -16,11 +16,11 @@ from a `.json` file. I know better solutions exist, but I was bored.
 ### To Run:
 
 ```
-python password_generator.py
+python password_generator.py <number of words> <letters in each word>
 ```
 
 ### Example Output:
 
-`shptilexhockdaza`  
-`murrshahstimaddu`  
-`oradcolycawlheir`
+`shptilexhockdaza2`  
+`murrshahstimaddu7`  
+`oradcolycawlheir5`
