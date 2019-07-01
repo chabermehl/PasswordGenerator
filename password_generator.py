@@ -2,6 +2,10 @@ import sys
 import json
 import random
 
+# TODO add validity checks
+# TODO add more command line options, -help etc
+# TODO make a simple GUI
+
 
 def main():
     generated_password = generate(int(sys.argv[1]), int(sys.argv[2]))
@@ -17,10 +21,8 @@ def generate(num_words, num_letters):
     counter = 0
     password = ""
 
-   # change the counter max to be any number, just depends on how long you want you passwords
     while counter <= num_words:
         word = random.choice(list(words))
-        # word length can be easily changed to make different passwords
         if(len(word) == num_letters):
             password += word
             counter += 1
