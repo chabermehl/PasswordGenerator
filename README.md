@@ -16,7 +16,7 @@ from a `.json` file. I know better solutions exist, but I was bored.
 ### To Run:
 
 ```
-python password_generator.py <number of words> <letters in each word>
+python password_generator.py <number of words> <number of letters>
 ```
 
 ### Example Output:
