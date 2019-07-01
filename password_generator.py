@@ -8,12 +8,14 @@ words = json.load(file)
 counter = 0
 password = ""
 
-# The 3 can be any number, just depends on how long you want you passwords
+# change the counter max to be any number, just depends on how long you want you passwords
 while counter <= 1:
     word = random.choice(list(words))
-    # word length can be easily changed to make stronger passwords
+    # word length can be easily changed to make different passwords
     if(len(word) == 7):
-        password = password + word
+        password += word
         counter += 1
 
-print(password + str(random.randint(1, 11)))
+random_int = random.randint(1, 11)
+
+print(password + str(random_int))
