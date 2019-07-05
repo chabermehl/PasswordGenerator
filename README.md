@@ -27,7 +27,7 @@ python password_generator.py -w=4 -l=6
 ```
 
 ```
-python password_generator.py -w=3 -l=7 -c -p
+python password_generator.py -w=3 -l=7 -p
 ```
 
 ### Example Output:
