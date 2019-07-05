@@ -15,11 +15,13 @@ from a `.json` file. I know better solutions exist, but I was bored.
 
 ### To Run:
 
-```
-python password_generator.py <number of words> <number of letters>
-```
-<br>
-Example
+Optional flags:
+-w, --words - Number of words <br>
+-l, --letters - Number of letters <br>
+-p - if this flag is set, the script will copy the result to the clipboard instead of printing to the console. <br>
+
+### Examples:
+
 ```
 python password_generator.py -w=4 -l=6
 ```
