@@ -18,6 +18,15 @@ from a `.json` file. I know better solutions exist, but I was bored.
 ```
 python password_generator.py <number of words> <number of letters>
 ```
+<br>
+Example
+```
+python password_generator.py -w=4 -l=6
+```
+
+```
+python password_generator.py -w=3 -l=7 -c -p
+```
 
 ### Example Output:
 
