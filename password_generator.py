@@ -1,15 +1,32 @@
 import sys
 import json
 import random
+import argparse
+import pyperclip
 
 # TODO add validity checks
 # TODO add more command line options, -help etc
 # TODO make a simple GUI
 
 
+#Arg parser to simplify using command line args. -h help is provided automatically.
+parser = argparse.ArgumentParser()
+
+parser.add_argument("-w", "--words", help="number of words", type=int)
+parser.add_argument("-l", "--letters", help="number of letters", type=int)
+parser.add_argument("-p", "--private", help="do not print password to console", action='store_true')
+args = parser.parse_args()
+
+
 def main():
-    generated_password = generate(int(sys.argv[1]), int(sys.argv[2]))
-    print(generated_password)
+    generated_password = generate(args.words, args.letters)
+
+    #Still prints out stars if in private mode, just so that it's clear that the script executed.
+    if args.private == False:
+        print(generated_password)
+    else:
+        print("**************")
+        pyperclip.copy(generated_password)
 
 
 def generate(num_words, num_letters):
