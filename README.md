@@ -3,6 +3,11 @@
 Created this for fun to make quick and easy passwords for myself. It works by loading the words into a dictionary
 from a `.json` file. I know better solutions exist, but I was bored.
 
+## Future Plans
+
+-   Word count and length validation
+-   Simple GUI
+
 ## Usage
 
 ### Python Version:

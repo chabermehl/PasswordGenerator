@@ -4,10 +4,6 @@ import random
 import argparse
 import pyperclip
 
-# TODO add validity checks
-# TODO make a simple GUI
-
-
 # Arg parser to simplify using command line args. -h help is provided automatically.
 parser = argparse.ArgumentParser()
 
