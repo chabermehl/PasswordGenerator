@@ -5,8 +5,9 @@ from a `.json` file. I know better solutions exist, but I was bored.
 
 ## Future Plans
 
--   Word count and length validation
--   Simple GUI
+- [x]  Add command line options
+- [ ]  Word count and length validation
+- [ ]  Simple GUI
 
 ## Usage
 
