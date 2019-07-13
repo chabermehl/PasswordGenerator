@@ -5,23 +5,23 @@ import argparse
 import pyperclip
 
 # TODO add validity checks
-# TODO add more command line options, -help etc
 # TODO make a simple GUI
 
 
-#Arg parser to simplify using command line args. -h help is provided automatically.
+# Arg parser to simplify using command line args. -h help is provided automatically.
 parser = argparse.ArgumentParser()
 
 parser.add_argument("-w", "--words", help="number of words", type=int)
 parser.add_argument("-l", "--letters", help="number of letters", type=int)
-parser.add_argument("-p", "--private", help="do not print password to console", action='store_true')
+parser.add_argument(
+    "-p", "--private", help="do not print password to console", action='store_true')
 args = parser.parse_args()
 
 
 def main():
     generated_password = generate(args.words, args.letters)
 
-    #Still prints out stars if in private mode, just so that it's clear that the script executed.
+    # Still prints out stars if in private mode, just so that it's clear that the script executed.
     if args.private == False:
         print(generated_password)
     else:
