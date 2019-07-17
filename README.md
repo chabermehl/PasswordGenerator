@@ -29,11 +29,11 @@ Optional flags:
 ### Examples:
 
 ```
-python password_generator.py -w=4 -l=6
+python main.py -w=4 -l=6
 ```
 
 ```
-python password_generator.py -w=3 -l=7 -p
+python main.py -w=3 -l=7 -p
 ```
 
 ### Example Output:
