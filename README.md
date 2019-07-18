@@ -21,23 +21,31 @@ from a `.json` file. I know better solutions exist, but I was bored.
 
 ### To Run:
 
-Optional flags:
--w, --words - Number of words <br>
--l, --letters - Number of letters <br>
--p - if this flag is set, the script will copy the result to the clipboard instead of printing to the console. <br>
+`python main.py [-h] [-r] [-p] [words] [letters]`
 
-### Examples:
+#### positional arguments:  
+* words
+  * number of words in the password
+  * requires letters  
+* letters
+  * number of letters in each word
+  * requires words  
 
-```
-python main.py -w=4 -l=6
-```
+#### optional arguments:  
+  * -h, --help     show this help message and exit  
+  * -r, --random   produce a random password  
+  * -p, --private  do not print password to console  
 
-```
-python main.py -w=3 -l=7 -p
-```
+### Usage Examples:
+
+* Basic Password Generation: `python main.py 4 4`
+* Random Password: `python main.py -r`
+* Using Private Flag: `python main.py 4 4 -p` `python main.py -p --random`
+* Help: `python main.py -h`
 
 ### Example Output:
 
-`shptilexhockdaza2`  
-`murrshahstimaddu7`  
-`oradcolycawlheir5`
+```
+Your password has been copied to your clipboard!
+Password: thoodipsthowbaftkoko4
+```
