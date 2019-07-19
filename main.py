@@ -21,11 +21,15 @@ def main():
         "-r", "--random", help="produce a random password", action="store_true")
     parser.add_argument(
         "-p", "--private", help="do not print password to console", action='store_true')
+    parser.add_argument(
+        "-a", "--alpha", help="create a random alpha numeric password", action='store_true')
 
     args = parser.parse_args()
 
-    if(args.random):
-        generated_password = generator.randomPassword(word_list)
+    if(args.alpha):
+        generated_password = generator.alpha_numeric()
+    elif(args.random):
+        generated_password = generator.random_password(word_list)
     else:
         generated_password = generator.generate(
             word_list, args.words, args.letters)
