@@ -6,8 +6,9 @@ from a `.json` file. I know better solutions exist, but I was bored.
 ## Future Plans
 
 - [x]  Add command line options
-- [ ]  Word count and length validation
-- [ ]  Simple GUI
+- [ ]  Add word count and length validation
+- [ ]  Add password storage and manager
+- [ ]  Add simple GUI
 
 ## Usage
 
@@ -32,16 +33,28 @@ from a `.json` file. I know better solutions exist, but I was bored.
   * requires words  
 
 #### optional arguments:  
-  * -h, --help     show this help message and exit  
-  * -r, --random   produce a random password  
-  * -p, --private  do not print password to console  
+  * -h, --help     
+    * show this help message and exit  
+  * -r, --random   
+    * produce a random password
+  * -a, --alpha    
+    * produce a random alpha numeric password  
+  * -p, --private  
+    * do not print password to console  
 
 ### Usage Examples:
 
-* Basic Password Generation: `python main.py 4 4`
-* Random Password: `python main.py -r`
-* Using Private Flag: `python main.py 4 4 -p` `python main.py -p --random`
-* Help: `python main.py -h`
+* Basic Password Generation: 
+  * `python main.py 4 4`
+* Random Password: 
+  * `python main.py -r`
+* Random Alpha Numeric: 
+  * `python main --alpha`
+* Using Private Flag: 
+  * `python main.py 4 4 -p` 
+  * `python main.py -p --random`
+* Help: 
+  * `python main.py -h`
 
 ### Example Output:
 
