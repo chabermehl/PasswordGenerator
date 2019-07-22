@@ -13,16 +13,11 @@ def main():
 
     parser = argparse.ArgumentParser()
 
-    parser.add_argument(
-        "words", nargs="?", help="number of words, requires letters", type=int)
-    parser.add_argument(
-        "letters", nargs="?", help="number of letters, requires words", type=int)
-    parser.add_argument(
-        "-r", "--random", help="produce a random password", action="store_true")
-    parser.add_argument(
-        "-p", "--private", help="do not print password to console", action='store_true')
-    parser.add_argument(
-        "-a", "--alpha", help="create a random alpha numeric password", action='store_true')
+    parser.add_argument("words", nargs="?", help="number of words, requires letters", type=int)
+    parser.add_argument("letters", nargs="?", help="number of letters, requires words", type=int)
+    parser.add_argument("-r", "--random", help="produce a random password", action="store_true")
+    parser.add_argument("-p", "--private", help="do not print password to console", action='store_true')
+    parser.add_argument("-a", "--alpha", help="create a random alpha numeric password", action='store_true')
 
     args = parser.parse_args()
 
@@ -31,8 +26,7 @@ def main():
     elif(args.random):
         generated_password = generator.random_password(word_list)
     else:
-        generated_password = generator.generate(
-            word_list, args.words, args.letters)
+        generated_password = generator.generate(word_list, args.words, args.letters)
 
     if args.private == False:
         print("Your password has been copied to your clipboard!")

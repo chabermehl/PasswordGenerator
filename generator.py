@@ -37,10 +37,8 @@ def alpha_numeric():
 
     characters = string.ascii_letters + string.digits
     if(random_int >= 10):
-        password = ''.join(random.choice(characters)
-                           for i in range(random_int - 2))
+        password = ''.join(random.choice(characters) for i in range(random_int - 2))
     else:
-        password = ''.join(random.choice(characters)
-                           for i in range(random_int - 1))
+        password = ''.join(random.choice(characters) for i in range(random_int - 1))
 
     return(password + str(random_int))
