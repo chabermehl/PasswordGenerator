@@ -1,44 +1,40 @@
 import json
 
-import generator
-
-'''
-A vault will be a password file. The reason I'm making this distinction is for
-future functionality, such as the ability to save the vault as a portable
-file to sync over google drive etc, and also to keep passwords logically
-partitioned on disk.
-'''
-
 
 class manager():
 
     def __init__(self):
 
-        self.path = '.\\'
+        self.path = '.\\vault.json'
         self.entries = {}
 
     def load_vault(self):
-
+        self.loose_entries = self.entries
         try:
             with open(self.path, 'r') as file:
                 self.entries = json.load(file)
                 print(self.entries)
         except ImportError:
-
             print('File does not exist...')
 
-    def save_vault(self):
+    def save_vault(self, merge=True):
+        if merge is True:
+            self.entries.update(self.loose_entries)
+            self.loose_entries.clear()
 
         with open(self.path, 'w', encoding='utf-8') as file:
             json.dump(self.entries, file, ensure_ascii=False, indent=4)
 
-    def create_entry(self, title, username, password=""):
+    def close_vault(self, save=True):
+        if save is True:
+            self.save_vault()
 
-        '''TODO: If no password, use generator to create one'''
+        self.entries.clear()
+
+    def create_entry(self, title, username, password=""):
         self.entries.update({title: [username, password]})
 
     def edit_entry(self, title, username="", password=""):
-
         if len(username) > 1:
             self.entries[title][0] = username
 
@@ -50,6 +46,14 @@ class manager():
 
     def get_all_entries(self):
         return self.entries
+
+    def get_entry(self, title):
+        if title in self.loose_entries:
+            return self.loose_entries[title]
+        elif title in self.entries:
+            return self.entries[title]
+        else:
+            return None
 
     def set_path(self, path):
         self.path = path
