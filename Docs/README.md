@@ -20,6 +20,10 @@ from a `.json` file. I know better solutions exist, but I was bored.
 
 `words_dictionary.json` for the words.
 
+### Dependencies
+
+`pip install pyperclip`
+
 ### To Run:
 
 `python main.py [-h] [-r] [-p] [words] [letters]`
