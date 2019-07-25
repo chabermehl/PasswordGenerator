@@ -8,7 +8,7 @@ import generator
 
 
 def main():
-    file = open("words_dictionary.json", "r")
+    file = open("../resources/words_dictionary.json", "r")
     word_list = list(json.load(file))
 
     parser = argparse.ArgumentParser()
